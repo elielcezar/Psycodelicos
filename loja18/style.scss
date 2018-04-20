@@ -20,7 +20,7 @@ $roxo: #201529;
 
 body{
     background: $roxo url(img/topo.jpg) center 78px no-repeat !important;
-    padding-top: 108px;
+    padding-top: 58px;
     background-attachment: fixed !important;
 }
 
@@ -72,17 +72,14 @@ header#masthead{
   }
 }
 
-.logo-evento img{
-  margin: auto;
-  max-width: 100%;
-  margin-bottom: 100px;
-  display: none;
-}
+/* busca */
+.site-search{display: none;}
 
 .main-menu{
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10;
   background: #34194d;
 
   .container{
@@ -95,84 +92,132 @@ header#masthead{
     float: right;
     text-align: right;
 
+    li{
+      a{transition: all .3s}
+      a:hover{
+        background: #8d20ae;
+        color: #fff;
+      }
+    }
+
     li:last-child{
       a{
-        background-color: #d8bbff;
+        background-color: #fff;
         color: $roxo;
         font-weight: bold;
+
+        &:hover{
+          background: #8d20ae;
+          color: #fff;
+        }
       }
     }
   }
 }
+
 #site-navigation{float: right;}
+
 #site-header-cart{display: none;}
-/*#content{
-  background: rgba(0,0,0,0.85);
-}*/
-#chamada{
+
+.logo-evento{
   float: left;
   width: 100%;
-  position: relative;
-
-  .foto{
-    //float: left;
-    width: 60%;
-    //margin-left: 5%;
-    position: absolute;
-    top: -100px;
-    left: 0;
-
-  }
-  .chamada{
-    float: left;
-    width: 46%;
-    background:#352243;
-    color: #fff;
-    padding: 3% 5%;
-    color: #fff !important;
-    position: absolute;
-    top: 100px;
-    right: 0;
-
-    h2{color: #fff !important;}
-  }
-}
-#about{
-  background: #fff;
-  padding: 75px 0;
-  margin-top: 325px;
-  float: left;
-  width: 70%;
-  margin-left: 4%;
-  margin-bottom: 100px;
   text-align: center;
 
-  .item{
-    float: left;
-    width: 33%;
-    text-align: center;
+  a{display: inline-block;}
+}
 
-    img{margin: auto;}
+.logo-evento .home{display: none;}
 
-    h3{
-      font-weight: bold;
+.logo-evento .inside{
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+/*--- HOME --------------------------------------------------------------------------*/
+
+@media(min-width: 1024px){
+  .home{
+    .logo-evento{
+      float: left;
+      width: 100%;
+      margin-bottom: 100px;
+
+      .home{
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+    }
+    .logo-evento .inside{display: none;}
+    #content{background: rgba(0,0,0,0.85);}
+
+    #chamada{
+      float: left;
+      width: 100%;
+      position: relative;
+
+      .foto{
+        width: 60%;
+        position: absolute;
+        top: -100px;
+        left: 0;
+
+      }
+      .chamada{
+        float: left;
+        width: 46%;
+        background:#352243;
+        color: #fff;
+        padding: 3% 5%;
+        color: #fff !important;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        z-index: 5;
+
+        h2{
+          color: #fff !important;
+          font-weight: bold;
+        }
+      }
+    }
+    #about{
+      background: #fff;
+      padding: 75px 0;
+      margin-top: 325px;
+      float: left;
+      width: 70%;
+      margin-left: 4%;
+      margin-bottom: 100px;
+      text-align: center;
+
+      .item{
+        float: left;
+        width: 33%;
+        text-align: center;
+
+        img{margin: auto;}
+
+        h3{
+          font-weight: bold;
+        }
+      }
+
     }
   }
-
 }
 
 
-.front{
-  .logo-evento img{display: block;}
-  #content{background: rgba(0,0,0,0.85);}
-}
-
-/* busca */
-.site-search{
-    display: none;
-}
 
 
 footer{
     background: transparent !important;
+    color: #fff !important;
+    a{
+      font-weight: bold;
+      color: #fff;
+    }
+    .col-full{background: transparent}
 }

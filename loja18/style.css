@@ -8,7 +8,7 @@ Template: storefront
 */
 body {
   background: #201529 url(img/topo.jpg) center 78px no-repeat !important;
-  padding-top: 108px;
+  padding-top: 58px;
   background-attachment: fixed !important;
 }
 
@@ -64,10 +64,8 @@ header#masthead .site-branding {
   top: 13px;
 }
 
-.logo-evento img {
-  margin: auto;
-  max-width: 100%;
-  margin-bottom: 100px;
+/* busca */
+.site-search {
   display: none;
 }
 
@@ -75,6 +73,7 @@ header#masthead .site-branding {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10;
   background: #34194d;
 }
 
@@ -89,10 +88,24 @@ header#masthead .site-branding {
   text-align: right;
 }
 
+.main-menu #menu-principal li a {
+  transition: all .3s;
+}
+
+.main-menu #menu-principal li a:hover {
+  background: #8d20ae;
+  color: #fff;
+}
+
 .main-menu #menu-principal li:last-child a {
-  background-color: #d8bbff;
+  background-color: #fff;
   color: #201529;
   font-weight: bold;
+}
+
+.main-menu #menu-principal li:last-child a:hover {
+  background: #8d20ae;
+  color: #fff;
 }
 
 #site-navigation {
@@ -103,76 +116,104 @@ header#masthead .site-branding {
   display: none;
 }
 
-/*#content{
-  background: rgba(0,0,0,0.85);
-}*/
-#chamada {
+.logo-evento {
   float: left;
   width: 100%;
-  position: relative;
-}
-
-#chamada .foto {
-  width: 60%;
-  position: absolute;
-  top: -100px;
-  left: 0;
-}
-
-#chamada .chamada {
-  float: left;
-  width: 46%;
-  background: #352243;
-  color: #fff;
-  padding: 3% 5%;
-  color: #fff !important;
-  position: absolute;
-  top: 100px;
-  right: 0;
-}
-
-#chamada .chamada h2 {
-  color: #fff !important;
-}
-
-#about {
-  background: #fff;
-  padding: 75px 0;
-  margin-top: 325px;
-  float: left;
-  width: 70%;
-  margin-left: 4%;
-  margin-bottom: 100px;
   text-align: center;
 }
 
-#about .item {
-  float: left;
-  width: 33%;
-  text-align: center;
+.logo-evento a {
+  display: inline-block;
 }
 
-#about .item img {
-  margin: auto;
-}
-
-#about .item h3 {
-  font-weight: bold;
-}
-
-.front .logo-evento img {
-  display: block;
-}
-
-.front #content {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-/* busca */
-.site-search {
+.logo-evento .home {
   display: none;
+}
+
+.logo-evento .inside {
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+/*--- HOME --------------------------------------------------------------------------*/
+@media (min-width: 1024px) {
+  .home .logo-evento {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .home .logo-evento .home {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+  .home .logo-evento .inside {
+    display: none;
+  }
+  .home #content {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .home #chamada {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .home #chamada .foto {
+    width: 60%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+  .home #chamada .chamada {
+    float: left;
+    width: 46%;
+    background: #352243;
+    color: #fff;
+    padding: 3% 5%;
+    color: #fff !important;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    z-index: 5;
+  }
+  .home #chamada .chamada h2 {
+    color: #fff !important;
+    font-weight: bold;
+  }
+  .home #about {
+    background: #fff;
+    padding: 75px 0;
+    margin-top: 325px;
+    float: left;
+    width: 70%;
+    margin-left: 4%;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  .home #about .item {
+    float: left;
+    width: 33%;
+    text-align: center;
+  }
+  .home #about .item img {
+    margin: auto;
+  }
+  .home #about .item h3 {
+    font-weight: bold;
+  }
 }
 
 footer {
   background: transparent !important;
+  color: #fff !important;
+}
+
+footer a {
+  font-weight: bold;
+  color: #fff;
+}
+
+footer .col-full {
+  background: transparent;
 }

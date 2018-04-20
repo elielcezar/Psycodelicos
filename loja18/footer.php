@@ -33,7 +33,27 @@
 
 </div><!-- #page -->
 
+
+
 <?php wp_footer(); ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<script type="text/javascript">
+jQuery( document ).ready(function() {
+	AOS.init({
+		easing: 'ease-out-back',
+		duration: 1000,
+		offset: 200,
+		once: true,
+		disable: window.innerWidth < 1024,
+	});
+});
+</script>
+
 
 </body>
 </html>

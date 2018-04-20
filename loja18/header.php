@@ -15,7 +15,11 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+
 <?php wp_head(); ?>
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -49,7 +53,10 @@
 
 		</div>
 
-		<div class="logo-evento"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/topo.png" class="logo"></a></div>
+		<div class="logo-evento">
+			<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/topo.png" class="logo home" data-aos="fade-down"></a>
+			<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/logo-inside.png" class="logo inside" data-aos="fade-down"></a>
+		</div>
 
 	</header><!-- #masthead -->
 
@@ -61,7 +68,7 @@
 	 */
 	do_action( 'storefront_before_content' ); ?>
 
-	<div id="content" class="site-content" tabindex="-1">
+	<div id="content" class="site-content" tabindex="-1" <?php if (!is_front_page()){ ?> data-aos="fade-down"<?php } ?>>
 		<div class="col-full">
 
 		<?php
