@@ -6,6 +6,10 @@ Author: Woo
 Author URI: http://woocommerce.com
 Template: storefront
 */
+html, body {
+  height: 100%;
+}
+
 body {
   background: #201529 url(img/topo.jpg) center 78px no-repeat !important;
   padding-top: 58px;
@@ -141,7 +145,7 @@ header#masthead .site-branding {
   .home .logo-evento {
     float: left;
     width: 100%;
-    margin-bottom: 100px;
+    margin: 50px 0 80px 0;
   }
   .home .logo-evento .home {
     display: block;
@@ -153,55 +157,109 @@ header#masthead .site-branding {
   }
   .home #content {
     background: rgba(0, 0, 0, 0.85);
+    background: #352243;
   }
-  .home #chamada {
+  .home #cta {
     float: left;
     width: 100%;
-    position: relative;
+    margin: -75px 0 100px 0;
+    text-align: center;
   }
-  .home #chamada .foto {
-    width: 60%;
-    position: absolute;
-    top: -100px;
-    left: 0;
-  }
-  .home #chamada .chamada {
+  .home #cta .item {
     float: left;
-    width: 46%;
+    width: 31%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+  }
+  .home #cta .item img {
+    margin: auto;
+  }
+  .home #cta .item h3 {
+    font-weight: bold;
+  }
+  .home #cta .item:nth-child(2) {
+    margin: 0 3.5%;
+  }
+  .home #about {
+    float: left;
+    width: 100%;
+    background-image: url(img/psycodelicos.jpg);
+    background-repeat: no-repeat;
+    background-position: -150px 0px;
+    background-size: 77% auto;
+    padding-left: 50%;
+    margin-bottom: 100px;
+  }
+  .home #about .chamada {
+    float: left;
+    width: 100%;
     background: #352243;
     color: #fff;
     padding: 3% 5%;
     color: #fff !important;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    z-index: 5;
   }
-  .home #chamada .chamada h2 {
+  .home #about .chamada h2 {
     color: #fff !important;
     font-weight: bold;
   }
-  .home #about {
-    background: #fff;
-    padding: 75px 0;
-    margin-top: 325px;
-    float: left;
-    width: 70%;
-    margin-left: 4%;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-  .home #about .item {
-    float: left;
-    width: 33%;
-    text-align: center;
-  }
-  .home #about .item img {
-    margin: auto;
-  }
-  .home #about .item h3 {
-    font-weight: bold;
-  }
+}
+
+#countdown {
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 50px 0 75px 0;
+  transition: .3s all;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#countdown .row {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+}
+
+#countdown .col-sm-3 {
+  width: 20%;
+  margin: 0 2.5%;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-bottom: 25px;
+}
+
+#countdown h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #201529;
+  font-size: 42px;
+  margin: 8px 0 0 0 !important;
+}
+
+#countdown h4 {
+  color: #201529;
+  font-weight: 700;
+  margin: 13px 0 0 0;
+  font-size: 32px;
+}
+
+#countdown a.btn {
+  background: #059616;
+  border: 2px solid #1f0307;
+}
+
+#countdown a.btn:hover {
+  background: #fff;
+  color: #059616;
+  border: 2px solid #1f0307;
+}
+
+#cat-footer.active {
+  opacity: 1;
+  bottom: 0;
+  height: auto;
 }
 
 footer {

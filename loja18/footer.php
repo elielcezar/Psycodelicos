@@ -12,6 +12,34 @@
 		</div><!-- .col-full -->
 	</div><!-- #content -->
 
+	<section id="countdown">
+		<div class="container">
+							<div class="row">
+
+									<h3>Garanta já seu ingresso!</h3>
+									<p>Faltam</p>
+
+									<div class="col-sm-3">
+											<h4><span id="dias"></span></h4>
+											<span>DIAS</span>
+									</div>
+									<div class="col-sm-3">
+											<h4><span id="horas"></span></h4>
+											<span>HORAS</span>
+									</div>
+									<div class="col-sm-3">
+											<h4><span id="minutos"></span></h4>
+											<span>MINUTOS</span>
+									</div>
+									<div class="col-sm-3">
+											<h4><span id="segundos"></span></h4>
+											<span>SEGUNDOS</span>
+									</div>
+
+							</div>
+		</div>
+	</section>
+
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -42,8 +70,12 @@
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/js/jquery.countdown.js"></script>
+
 <script type="text/javascript">
-jQuery( document ).ready(function() {
+(function($) {
+
+$( document ).ready(function() {
 	AOS.init({
 		easing: 'ease-out-back',
 		duration: 1000,
@@ -51,7 +83,28 @@ jQuery( document ).ready(function() {
 		once: true,
 		disable: window.innerWidth < 1024,
 	});
+
+/*	jQuery('#clock').countdown('2018/09/06', function(event) {
+		 jQuery(this).html(event.strftime('%D dias %H horas %M minutos %S segundos'));
+	 });*/
+
+	 $('#dias').countdown('2018/09/06', function(event) {
+	 		 $(this).html(event.strftime('%D'));
+	 });
+	 $('#horas').countdown('2018/09/06', function(event) {
+	 		 $(this).html(event.strftime('%H'));
+	 });
+	 $('#minutos').countdown('2018/09/06', function(event) {
+	 		 $(this).html(event.strftime('%M'));
+	 });
+	 $('#segundos').countdown('2018/09/06', function(event) {
+	 		 $(this).html(event.strftime('%S'));
+	 });
+
+
 });
+})(jQuery);
+
 </script>
 
 

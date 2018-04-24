@@ -17,6 +17,9 @@ $cinza: #777;
 
 $roxo: #201529;
 
+html, body{
+  height: 100%;
+}
 
 body{
     background: $roxo url(img/topo.jpg) center 78px no-repeat !important;
@@ -142,7 +145,7 @@ header#masthead{
     .logo-evento{
       float: left;
       width: 100%;
-      margin-bottom: 100px;
+      margin: 50px 0 80px 0;
 
       .home{
         display: block;
@@ -151,31 +154,52 @@ header#masthead{
       }
     }
     .logo-evento .inside{display: none;}
-    #content{background: rgba(0,0,0,0.85);}
 
-    #chamada{
+    #content{
+      background: rgba(0,0,0,0.85);
+      background:#352243;
+    }
+
+    #cta{
       float: left;
       width: 100%;
-      position: relative;
+      margin: -75px 0 100px 0;
+      text-align: center;
 
-      .foto{
-        width: 60%;
-        position: absolute;
-        top: -100px;
-        left: 0;
+      .item{
+        float: left;
+        width: 31%;
+        height: 100%;
+        background: #fff;
+        text-align: center;
+        img{margin: auto;}
+        h3{
+          font-weight: bold;
+        }
 
+        &:nth-child(2){
+          margin: 0 3.5%;
+        }
       }
+    }
+
+    #about{
+      float: left;
+      width: 100%;
+      background-image: url(img/psycodelicos.jpg);
+      background-repeat: no-repeat;
+      background-position: -150px 0px;
+      background-size: 77% auto;
+      padding-left: 50%;
+      margin-bottom: 100px;
+
       .chamada{
         float: left;
-        width: 46%;
+        width: 100%;
         background:#352243;
         color: #fff;
         padding: 3% 5%;
         color: #fff !important;
-        position: absolute;
-        top: 100px;
-        right: 0;
-        z-index: 5;
 
         h2{
           color: #fff !important;
@@ -183,33 +207,65 @@ header#masthead{
         }
       }
     }
-    #about{
-      background: #fff;
-      padding: 75px 0;
-      margin-top: 325px;
-      float: left;
-      width: 70%;
-      margin-left: 4%;
-      margin-bottom: 100px;
-      text-align: center;
 
-      .item{
-        float: left;
-        width: 33%;
-        text-align: center;
-
-        img{margin: auto;}
-
-        h3{
-          font-weight: bold;
-        }
-      }
-
-    }
   }
 }
 
+#countdown{
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 50px 0 75px 0;
+  transition: .3s all;
+  text-align: center;
+  margin-bottom: 100px;
 
+  .row{
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+  }
+  .col-sm-3{
+    width: 20%;
+    margin: 0 2.5%;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-bottom: 25px;
+  }
+
+    h3{
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $roxo;
+        font-size: 42px;
+        margin: 8px 0 0 0 !important;
+    }
+
+    h4{
+        color: $roxo;
+        font-weight: 700;
+        margin: 13px 0 0 0;
+        font-size: 32px;
+    }
+
+    a.btn{
+        background: #059616;
+        border: 2px solid #1f0307;
+
+        &:hover{
+            background: #fff;
+            color: #059616;
+            border: 2px solid #1f0307;
+        }
+    }
+}
+
+#cat-footer.active{
+    opacity: 1;
+    bottom: 0;
+    height: auto;
+}
 
 
 footer{
