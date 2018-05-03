@@ -25,6 +25,10 @@ body{
     background: $roxo url(img/topo.jpg) center 78px no-repeat !important;
     padding-top: 58px;
     background-attachment: fixed !important;
+    @media(max-width: 767px){
+        background-attachment: scroll !important;
+        background-position: center 12px !important;
+    }
 }
 
 a:focus,
@@ -59,7 +63,16 @@ input[type="submit"]:hover,
     outline: 0;
 }
 
-.col-full{background: #fff;}
+.col-full{
+  background: #fff;
+  @media(max-width: 767px){
+    padding: 15px;
+    margin: 10px;
+  }
+  @media(min-width: 768px){
+    padding-top: 50px;
+  }
+}
 
 body.home .col-full{background: transparent;}
 
@@ -67,11 +80,48 @@ header#masthead{
   background: transparent;
   text-align: center;
   border-bottom: none;
+  @media(max-width:767px){
+    margin-bottom: 0;
+  }
 
   .site-branding{
-    width: 50px !important;
     position: absolute;
     top: 13px;
+
+    @media(max-width:767px){
+      top: 5px;
+      left: 20px;
+    }
+    img.custom-logo{width: 50px;}
+  }
+  img.custom-logo{
+    @media(max-width:767px){
+      width: 50px;
+    }
+  }
+  #site-navigation{
+    @media(max-width: 767px){
+      min-height: 60px;
+    }
+    .menu-toggle{
+      margin: 8px;
+    }
+  }
+
+  .handheld-navigation{
+    height: 750px;
+
+    li a{
+      padding: 1.5em 0;
+    }
+  }
+
+  #site-navigation{
+    @media(max-width: 767px){
+      width: 100%;
+      background: $roxo;
+    }
+
   }
 }
 
@@ -120,13 +170,12 @@ header#masthead{
 
 #site-navigation{float: right;}
 
-#site-header-cart{display: none;}
+//#site-header-cart{display: none;}
 
 .logo-evento{
   float: left;
   width: 100%;
   text-align: center;
-
   a{display: inline-block;}
 }
 
@@ -136,28 +185,59 @@ header#masthead{
   margin: auto;
   max-width: 100%;
   margin-bottom: 30px;
+
+    @media(max-width: 767px){
+        max-width: 85%;
+    }
 }
+
+.woocommerce-breadcrumb,
+.product_meta{display: none;}
 
 /*--- HOME --------------------------------------------------------------------------*/
 
-@media(min-width: 1024px){
+
   .home{
     .logo-evento{
       float: left;
       width: 100%;
+      text-align: center;
       margin: 50px 0 80px 0;
+      @media(max-width: 767px){
+          margin-top: 0;
+      }
+
+      img{
+        @media(max-width: 767px){
+            max-width: 85%;
+        }
+      }
 
       .home{
         display: block;
         margin: auto;
         max-width: 100%;
+        @media(max-width: 767px){
+            display: none
+        }
       }
     }
-    .logo-evento .inside{display: none;}
+    .logo-evento .inside{
+      display: none;
+      @media(max-width: 767px){
+          display: block
+      }
+    }
 
     #content{
       background: rgba(0,0,0,0.85);
       background:#352243;
+
+      .col-full{
+        @media(max-width: 767px){
+            padding: 0;
+        }
+      }
     }
 
     #cta{
@@ -166,15 +246,53 @@ header#masthead{
       margin: -75px 0 100px 0;
       text-align: center;
 
+      @media(max-width: 767px){
+          margin-bottom: 50px;
+      }
+
       .item{
         float: left;
         width: 31%;
         height: 100%;
-        background: #fff;
+        background: #fff !important;
         text-align: center;
-        img{margin: auto;}
+        border-radius: 5px;
+        padding-top: 20px;
+
+        @media(max-width: 767px){
+          width: 100%;
+          margin: 0 0 20px 0 !important;
+          padding-bottom: 20px;
+          text-align: left;
+        }
+
+        img{
+          margin: auto;
+          @media(max-width: 767px){
+            float: left;
+            max-width: 45%;
+          }
+        }
         h3{
           font-weight: bold;
+
+          @media(max-width:767px){
+            font-weight: bold;
+            float: left;
+            width: auto;
+            display: block;
+            clear: none;
+          }
+        }
+
+        p{
+          @media(max-width: 767px){
+            float: left;
+            max-width: 50%;
+          }
+          @media(min-width: 768px){
+            padding: 0 20%;
+          }
         }
 
         &:nth-child(2){
@@ -193,6 +311,14 @@ header#masthead{
       padding-left: 50%;
       margin-bottom: 100px;
 
+      @media(max-width: 767px){
+        background-position: top center;
+        background-size: 100%;
+        padding-left: 0;
+        margin-bottom: 20px;
+        padding-top: 200px;
+      }
+
       .chamada{
         float: left;
         width: 100%;
@@ -209,9 +335,13 @@ header#masthead{
     }
 
   }
-}
 
+
+.home #countdown{
+    display: block;
+}
 #countdown{
+  display: none;
   float: left;
   width: 100%;
   background: #fff;
@@ -232,6 +362,11 @@ header#masthead{
     border: 1px solid #ccc;
     border-radius: 5px;
     padding-bottom: 25px;
+
+    @media(max-width: 767px){
+        width: 45%;
+        margin-bottom: 25px;
+    }
   }
 
     h3{
@@ -267,13 +402,25 @@ header#masthead{
     height: auto;
 }
 
+.storefront-handheld-footer-bar{
+    width: 30%;
+    right: 0;
+    left: auto;
+
+    .my-account,
+    .search{display: none;}
+    .cart{width: 100% !important;}
+}
 
 footer{
     background: transparent !important;
     color: #fff !important;
+    float: left;
     a{
       font-weight: bold;
       color: #fff;
     }
     .col-full{background: transparent}
+
+    .site-info{display: none;}
 }

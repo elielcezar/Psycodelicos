@@ -11,25 +11,25 @@ Template Name: Homepage Custom
 <?php get_header(); ?>
 
 <!-- About Section -->
-<section id="cta" data-aos="fade-right">
+<section id="cta">
 
-      <div class="item ingresso">
+      <div class="item ingresso" data-aos="fade-down">
         <a href="http://ecwd.net/psycodelicos/produto/ingresso-2/">
         <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-ingressos.png" />
         <h3>Ingressos</h3>
-        <p>Garanta já o seu<br/>ingresso online.</p>
+        <p>Garanta já o seu ingresso online.</p>
         </a>
       </div>
-      <div class="item promoters">
+      <div class="item promoters" data-aos="fade-up">
         <a href="http://ecwd.net/psycodelicos/promoters-e-pontos-de-venda/">
         <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-promoters.png" />
         <h3>Promoters</h3>
-        <p>Ou compre diretamente com<br/>um de nossos representantes.</p>
+        <p>Compre diretamente com um de nossos representantes.</p>
         </a>
       </div>
-      <div class="item facebook">
-        <a href="#">
-        <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-promoters.png" />
+      <div class="item facebook" data-aos="fade-down">
+        <a href="https://www.facebook.com/events/542423806130891/">
+        <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-facebook.png" />
         <h3>Facebook</h3>
         <p>Confirme presença no evento no Facebook.</p>
         </a>
@@ -41,7 +41,7 @@ Template Name: Homepage Custom
 
 </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
 
         <!--img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/psycodelicos.jpg" class="foto" data-aos="fade-right"-->
 

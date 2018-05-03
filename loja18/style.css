@@ -16,6 +16,13 @@ body {
   background-attachment: fixed !important;
 }
 
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll !important;
+    background-position: center 12px !important;
+  }
+}
+
 a:focus,
 .focus a {
   outline: none !important;
@@ -52,6 +59,19 @@ input[type="submit"]:hover,
   background: #fff;
 }
 
+@media (max-width: 767px) {
+  .col-full {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-full {
+    padding-top: 50px;
+  }
+}
+
 body.home .col-full {
   background: transparent;
 }
@@ -62,10 +82,57 @@ header#masthead {
   border-bottom: none;
 }
 
+@media (max-width: 767px) {
+  header#masthead {
+    margin-bottom: 0;
+  }
+}
+
 header#masthead .site-branding {
-  width: 50px !important;
   position: absolute;
   top: 13px;
+}
+
+@media (max-width: 767px) {
+  header#masthead .site-branding {
+    top: 5px;
+    left: 20px;
+  }
+}
+
+header#masthead .site-branding img.custom-logo {
+  width: 50px;
+}
+
+@media (max-width: 767px) {
+  header#masthead img.custom-logo {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  header#masthead #site-navigation {
+    min-height: 60px;
+  }
+}
+
+header#masthead #site-navigation .menu-toggle {
+  margin: 8px;
+}
+
+header#masthead .handheld-navigation {
+  height: 750px;
+}
+
+header#masthead .handheld-navigation li a {
+  padding: 1.5em 0;
+}
+
+@media (max-width: 767px) {
+  header#masthead #site-navigation {
+    width: 100%;
+    background: #201529;
+  }
 }
 
 /* busca */
@@ -116,10 +183,6 @@ header#masthead .site-branding {
   float: right;
 }
 
-#site-header-cart {
-  display: none;
-}
-
 .logo-evento {
   float: left;
   width: 100%;
@@ -140,72 +203,185 @@ header#masthead .site-branding {
   margin-bottom: 30px;
 }
 
-/*--- HOME --------------------------------------------------------------------------*/
-@media (min-width: 1024px) {
-  .home .logo-evento {
-    float: left;
-    width: 100%;
-    margin: 50px 0 80px 0;
-  }
-  .home .logo-evento .home {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-  }
-  .home .logo-evento .inside {
-    display: none;
-  }
-  .home #content {
-    background: rgba(0, 0, 0, 0.85);
-    background: #352243;
-  }
-  .home #cta {
-    float: left;
-    width: 100%;
-    margin: -75px 0 100px 0;
-    text-align: center;
-  }
-  .home #cta .item {
-    float: left;
-    width: 31%;
-    height: 100%;
-    background: #fff;
-    text-align: center;
-  }
-  .home #cta .item img {
-    margin: auto;
-  }
-  .home #cta .item h3 {
-    font-weight: bold;
-  }
-  .home #cta .item:nth-child(2) {
-    margin: 0 3.5%;
-  }
-  .home #about {
-    float: left;
-    width: 100%;
-    background-image: url(img/psycodelicos.jpg);
-    background-repeat: no-repeat;
-    background-position: -150px 0px;
-    background-size: 77% auto;
-    padding-left: 50%;
-    margin-bottom: 100px;
-  }
-  .home #about .chamada {
-    float: left;
-    width: 100%;
-    background: #352243;
-    color: #fff;
-    padding: 3% 5%;
-    color: #fff !important;
-  }
-  .home #about .chamada h2 {
-    color: #fff !important;
-    font-weight: bold;
+@media (max-width: 767px) {
+  .logo-evento .inside {
+    max-width: 85%;
   }
 }
 
+.woocommerce-breadcrumb,
+.product_meta {
+  display: none;
+}
+
+/*--- HOME --------------------------------------------------------------------------*/
+.home .logo-evento {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .home .logo-evento {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .home .logo-evento img {
+    max-width: 85%;
+  }
+}
+
+.home .logo-evento .home {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .home .logo-evento .home {
+    display: none;
+  }
+}
+
+.home .logo-evento .inside {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .home .logo-evento .inside {
+    display: block;
+  }
+}
+
+.home #content {
+  background: rgba(0, 0, 0, 0.85);
+  background: #352243;
+}
+
+@media (max-width: 767px) {
+  .home #content .col-full {
+    padding: 0;
+  }
+}
+
+.home #cta {
+  float: left;
+  width: 100%;
+  margin: -75px 0 100px 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .home #cta {
+    margin-bottom: 50px;
+  }
+}
+
+.home #cta .item {
+  float: left;
+  width: 31%;
+  height: 100%;
+  background: #fff !important;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .home #cta .item {
+    width: 100%;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+}
+
+.home #cta .item img {
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .home #cta .item img {
+    float: left;
+    max-width: 45%;
+  }
+}
+
+.home #cta .item h3 {
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .home #cta .item h3 {
+    font-weight: bold;
+    float: left;
+    width: auto;
+    display: block;
+    clear: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .home #cta .item p {
+    float: left;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home #cta .item p {
+    padding: 0 20%;
+  }
+}
+
+.home #cta .item:nth-child(2) {
+  margin: 0 3.5%;
+}
+
+.home #about {
+  float: left;
+  width: 100%;
+  background-image: url(img/psycodelicos.jpg);
+  background-repeat: no-repeat;
+  background-position: -150px 0px;
+  background-size: 77% auto;
+  padding-left: 50%;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .home #about {
+    background-position: top center;
+    background-size: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+    padding-top: 200px;
+  }
+}
+
+.home #about .chamada {
+  float: left;
+  width: 100%;
+  background: #352243;
+  color: #fff;
+  padding: 3% 5%;
+  color: #fff !important;
+}
+
+.home #about .chamada h2 {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.home #countdown {
+  display: block;
+}
+
 #countdown {
+  display: none;
   float: left;
   width: 100%;
   background: #fff;
@@ -228,6 +404,13 @@ header#masthead .site-branding {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+  #countdown .col-sm-3 {
+    width: 45%;
+    margin-bottom: 25px;
+  }
 }
 
 #countdown h3 {
@@ -262,9 +445,25 @@ header#masthead .site-branding {
   height: auto;
 }
 
+.storefront-handheld-footer-bar {
+  width: 30%;
+  right: 0;
+  left: auto;
+}
+
+.storefront-handheld-footer-bar .my-account,
+.storefront-handheld-footer-bar .search {
+  display: none;
+}
+
+.storefront-handheld-footer-bar .cart {
+  width: 100% !important;
+}
+
 footer {
   background: transparent !important;
   color: #fff !important;
+  float: left;
 }
 
 footer a {
@@ -274,4 +473,8 @@ footer a {
 
 footer .col-full {
   background: transparent;
+}
+
+footer .site-info {
+  display: none;
 }
