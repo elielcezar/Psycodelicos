@@ -88,16 +88,16 @@ $( document ).ready(function() {
 		 jQuery(this).html(event.strftime('%D dias %H horas %M minutos %S segundos'));
 	 });*/
 
-	 $('#dias').countdown('2018/09/06', function(event) {
+	 $('#dias').countdown('2018/08/04', function(event) {
 	 		 $(this).html(event.strftime('%D'));
 	 });
-	 $('#horas').countdown('2018/09/06', function(event) {
+	 $('#horas').countdown('2018/08/04', function(event) {
 	 		 $(this).html(event.strftime('%H'));
 	 });
-	 $('#minutos').countdown('2018/09/06', function(event) {
+	 $('#minutos').countdown('2018/08/04', function(event) {
 	 		 $(this).html(event.strftime('%M'));
 	 });
-	 $('#segundos').countdown('2018/09/06', function(event) {
+	 $('#segundos').countdown('2018/08/04', function(event) {
 	 		 $(this).html(event.strftime('%S'));
 	 });
 

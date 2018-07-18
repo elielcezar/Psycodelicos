@@ -14,14 +14,14 @@ Template Name: Homepage Custom
 <section id="cta">
 
       <div class="item ingresso" data-aos="fade-down">
-        <a href="http://ecwd.net/psycodelicos/produto/ingresso-2/">
+        <a href="http://psycodelicos.com.br/produto/ingresso-2/">
         <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-ingressos.png" />
         <h3>Ingressos</h3>
         <p>Garanta já o seu ingresso online.</p>
         </a>
       </div>
       <div class="item promoters" data-aos="fade-up">
-        <a href="http://ecwd.net/psycodelicos/promoters-e-pontos-de-venda/">
+        <a href="http://psycodelicos.com.br/promoters-e-pontos-de-venda/">
         <img src="<?php echo get_site_url(); ?>/wp-content/themes/loja18/img/ico-promoters.png" />
         <h3>Promoters</h3>
         <p>Compre diretamente com um de nossos representantes.</p>
